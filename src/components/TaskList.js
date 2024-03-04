@@ -75,7 +75,7 @@ export const TaskList = () => {
    const updateTask = async (e) => {
       e.preventDefault()
       if(name === "") {
-         return toast.error("Input field cannot be empty.")
+         return <h1>Input field cannot be empty.</h1>
       }
       try {
          await axios.put(`${URL}/api/tasks/${taskId}`, formData)
